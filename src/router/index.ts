@@ -2,7 +2,7 @@
 import {createRouter, createWebHistory} from 'vue-router'
 
 
-import page1 from '../components/page1.vue'
+
 import page2 from '../components/page2.vue'
 import page3 from '../components/page3.vue'
 import layout from '../layout/layout.vue'
