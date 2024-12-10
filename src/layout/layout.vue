@@ -1,50 +1,32 @@
 <template>
   <a-layout style="min-height: 100vh">
-    <a-layout-sider v-model:collapsed="collapsed" :trigger="null" collapsible>
-      <div class="logo" />
-      <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
-        <a-menu-item key="1">
-          <user-outlined />
-          <span>nav 1</span>
-        </a-menu-item>
-        <a-menu-item key="2">
-          <video-camera-outlined />
-          <span>nav 2</span>
-        </a-menu-item>
-        <a-menu-item key="3">
-          <upload-outlined />
-          <span>nav 3</span>
-        </a-menu-item>
-      </a-menu>
-    </a-layout-sider>
+    <a-layout-header >Header</a-layout-header>
     <a-layout>
-      <a-layout-header style="background: #fff; padding: 0">
-        <menu-unfold-outlined
-            v-if="collapsed"
-            class="trigger"
-            @click="() => (collapsed = !collapsed)"
-        />
-        <menu-fold-outlined v-else class="trigger" @click="() => (collapsed = !collapsed)" />
-      </a-layout-header>
-      <a-layout-content
-          :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '280px' }"
-      >
-        <router-view/>
-      </a-layout-content>
+      <a-layout-sider>
+        <a-menu mode="inline">
+          <a-menu-item key="/app/page1">
+            <span>page1</span>
+          </a-menu-item>
+          <a-menu-item key="/app/page2">
+            <span>page2</span>
+          </a-menu-item>
+          <a-menu-item key="/app/page3">
+            <span>page3</span>
+          </a-menu-item>
+        </a-menu>
+      </a-layout-sider>
+      <a-layout-content><router-view/></a-layout-content>
     </a-layout>
+    <a-layout-footer>Footer</a-layout-footer>
   </a-layout>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue';
-import {
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-} from '@ant-design/icons-vue';
-const selectedKeys = ref<string[]>(['1']);
-const collapsed = ref<boolean>(false);
+
+
+
+
+
+
 </script>
 <style scoped>
 

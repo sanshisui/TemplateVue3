@@ -8,16 +8,18 @@ import page3 from '../components/page3.vue'
 import layout from '../layout/layout.vue'
 
 const routes = [
-    {path: '/', component: layout,
-        children: [
-            {path: '/page1', component: page1},
-            {path: '/page2', component: page2},
-            {path: '/page3', component: page3},
-        ]
+    {
+        path: '/',
+        redirect: '/app/page1',
+    },
+    {path: "/page", component: layout, children: [
+            {path: "/page1", component: () => import('../components/page1.vue')},
+            {path: "/page2", component: page2},
+            {path: "/page3", component: page3},
+        ],
     },
 
 ]
-
 
 const router = createRouter({
     history: createWebHistory(),
