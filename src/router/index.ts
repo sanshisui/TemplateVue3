@@ -5,11 +5,17 @@ import {createRouter, createWebHistory} from 'vue-router'
 import page1 from '../components/page1.vue'
 import page2 from '../components/page2.vue'
 import page3 from '../components/page3.vue'
+import layout from '../layout/layout.vue'
 
 const routes = [
-    {path: '/page1', component: page1},
-    {path: '/page2', component: page2},
-    {path: '/page3', component: page3},
+    {path: '/', component: layout,
+        children: [
+            {path: '/page1', component: page1},
+            {path: '/page2', component: page2},
+            {path: '/page3', component: page3},
+        ]
+    },
+
 ]
 
 

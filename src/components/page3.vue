@@ -3,7 +3,7 @@
 </script>
 
 <template>
-
+  page3
 </template>
 
 <style scoped>
