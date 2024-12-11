@@ -12,15 +12,11 @@ const routes = [
         path: '/',
         redirect: '/page/page1',
     },
-    {path: "/page", name:"page", component: layout, children: [
+    {path: "/app", component: layout, children: [
             {path: "page1", component: () => import('../components/page1.vue')},
             {path: "page2", component: () => import('../components/page2.vue')},
-            {path: "page3", component: () => import('../components/page3.vue')},
+            {path: "page3", component: page2},
         ],
-    },
-    {
-        path: '/:pathMatch(.*)*',
-        component: () => import('../components/page3.vue')
     }
 
 ]
