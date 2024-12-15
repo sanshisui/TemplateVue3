@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="card flex justify-center gap-20">
+  <div class="card flex justify-center gap-14">
     <Button label="Verify" />
     <Button label="确认"/>
   </div>
