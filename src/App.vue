@@ -8,7 +8,6 @@ import { Button } from 'primevue';
  <div class="card flex justify-center ml-10 gap-10">
         <Button label="点击"></Button>
         <Button label="取消"></Button>
-        <p>你好</p>
     </div>
 </template>
 
