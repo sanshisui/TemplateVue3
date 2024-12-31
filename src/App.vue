@@ -1,14 +1,17 @@
 <script setup lang="ts">
-import { Button } from 'primevue';
+
+function toggleDarkMode() {
+    document.documentElement.classList.toggle('my-app-dark');
+}
 
 
 </script>
 
 <template>
- <div class="card flex justify-center ml-10 gap-10">
-        <Button label="点击"></Button>
-        <Button label="取消"></Button>
-    </div>
+    <NaveBar />
+    
+<Button label="Toggle Dark Mode" @click="toggleDarkMode()" />
+
 </template>
 
 <style scoped>
